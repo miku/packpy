@@ -2,7 +2,7 @@
 
 A short tour. At PyCon Balkan 2018-11-17, 16:00
 
-Martin Czygan
+Martin Czygan (github.com/miku)
 
 ----
 
@@ -14,11 +14,23 @@ Martin Czygan
 
 ----
 
-# Packaging is not just boring
+# Packaging seems boring
 
 * unrelated to features, hard to sell
 * hundreds of options
 * less formalized, project-dependent
+
+> ... plethora of packaging options ... (https://packaging.python.org/overview/)
+
+----
+
+# So why care?
+
+* to share code
+* to collaborate
+
+> It might seem strange to think about packaging before writing code, but this
+> process does wonders for avoiding future headaches. (https://packaging.python.org/overview/)
 
 ----
 
@@ -62,8 +74,8 @@ website, whatever.
 * tried to ease adoption of Python by using various tools (e.g. Linux
   distribution packages, to have upgrade and downgrade paths)
 
-Probably signs of a slight OCD. But there is some satisfaction in being able to
-just run *one command*. It's also hard, and might not be worth your time.
+There is some satisfaction in being able to just run *one command*. There are
+also trade-offs.
 
 ----
 
@@ -91,13 +103,13 @@ at [PyBay 2017](https://www.youtube.com/watch?v=iLVNWfPWAC8) (601), [BayPiggies
 # What will we look at?
 
 * just do nothing
-* from module to package to pypi
+* modules, packages, distributions, PyPI
 * single file deployments (PEP 441)
 * reusing linux distribution infrastructure
 * images and containers
 * frozen software
 
-Is there a best things. No. In the best case some inspiration or awareness of
+Is there a best thing? No. In the best case some inspiration or awareness of
 tools.
 
 ----
@@ -110,6 +122,7 @@ tools.
 Deployment cannot get simpler:
 
 ```
+# scp script.py ...
 # curl https://secure.site/script.py > /usr/local/bin && chmod +x /usr/local/bin/script.py
 ```
 
@@ -122,8 +135,9 @@ Beautiful, if possible (*simple is better than complex*).
 
 # From module to package
 
-* module is a file, package is a directory (containing an `__init__.py`)
-* the source can be grouped into a *source distribution* called *sdist*
+* a module is as single, importable python file
+* a package is a directory (containing an `__init__.py`)
+* a distribution is a way to bundle zero or more packages, with two variants: source and built distributions
 
 ```
 $ python setup.py sdist --formats=gztar,zip
@@ -189,3 +203,4 @@ Writing a setup.py file can be simple.
 ```
 $ python setup.py sdist bdist_wininst upload
 ```
+

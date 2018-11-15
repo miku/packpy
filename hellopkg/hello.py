@@ -18,3 +18,6 @@ def stats(message='Hello Packaging', url='https://pyconbalkan.com'):
         'size': len(r.content),
     }
 
+if __name__ == '__main__':
+    hello()
+

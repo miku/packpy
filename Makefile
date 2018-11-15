@@ -7,6 +7,7 @@ clean:
 	rm -rf hellopkg.egg-info/
 	rm -rf hellopkg.pex
 	rm -f Slides.pdf
+	find . -type d -name "__pycache__" -exec rm -rf {} \;
 
 sdist:
 	python setup.py sdist
