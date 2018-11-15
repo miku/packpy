@@ -25,6 +25,7 @@
 # A minimal zip example
 # Zip with a package
 # Zip with a package
+# The zipapp module
 # Enter pex
 # Default interpreter using pex
 # Using pex with deps prompt
@@ -33,6 +34,10 @@
 # Saving a .pex file
 # Using different interpreters
 # Wrapping a data wrangling script with pex
+# Enter shiv
+# Motivation (see: history.rst, pkg_resources problem)
+# Shiv example
+# Shiv and Django
 # Reusing Linux packaging
 # dh-virtualenv
 # Example deb package
