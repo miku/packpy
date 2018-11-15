@@ -12,7 +12,8 @@ def stats(message='Hello Packaging', url='https://pyconbalkan.com'):
     r = requests.get(url)
     return {
         'message': message,
-        'time': datetime.datetime.today(),
+        'url': url,
+        'time': datetime.datetime.today().isoformat(),
         'status_code': r.status_code,
         'size': len(r.content),
     }
