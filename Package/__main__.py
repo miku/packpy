@@ -10,8 +10,10 @@ Example input file: https://is.gd/QUNyGk
 
 import pymarc
 import sys
-reload(sys)
-sys.setdefaultencoding("utf-8")
+
+if sys.version_info.major < 3:
+    reload(sys)
+    sys.setdefaultencoding("utf-8")
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
