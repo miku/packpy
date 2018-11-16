@@ -11,8 +11,8 @@ PyCon Balkan, Belgrade, 2018-11-17 16:00-16:25
 # About me
 
 * Software developer at [Leipzig University Library](https://www.ub.uni-leipzig.de/start/)
-* Part-time consultant, co-author *Getting Started with Python Data Analysis* (2015)
-* Maintainer of a few open source tools
+* Co-author *Getting Started with Python Data Analysis* (2015)
+* Maintainer of a few niche open source tools
 
 ![](images/montage.png)
 
@@ -115,7 +115,6 @@ There is an nice talk called *The Packaging Gradient* by Mahmoud Hashemi at [PyB
 * "just do nothing"
 * modules, packages, distributions, PyPI
 * single file deployments (PEP 441)
-* frozen software
 * reusing linux package managers
 * building images
 

@@ -1,5 +1,6 @@
 Slides.pdf: Slides.md
-	pandoc -t beamer $< -o $@
+	osascript marp.scpt
+	# pandoc -t beamer $< -o $@
 
 clean:
 	rm -rf build/
