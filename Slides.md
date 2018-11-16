@@ -82,3 +82,21 @@ There are two items related to packaging:
 # On item #2
 
 > If the process takes any more than one step, it is <u>**prone to errors**</u>. And when you get closer to shipping, you want to have a <u>**very fast cycle**</u> of fixing the "last" bug, making the final EXEs, etc. If it takes 20 steps to compile the code, run the installation builder, etc., you’re <u>**going to go crazy**</u> and you’re going to make silly mistakes.
+
+----
+
+# Packaging is only a part of a larger story
+
+* the decade of devops (2009-)
+* code--build--test--**package**--**release**--configure--monitor
+
+There slides reflect only a few small pieces of the puzzle.
+
+----
+
+# The Packaging Gradient
+
+There is an nice talk called *The Packaging Gradient* by Mahmoud Hashemi at [PyBay 2017](https://www.youtube.com/watch?v=iLVNWfPWAC8) (YT:601), [BayPiggies2017](https://www.youtube.com/watch?v=Q3LyPTTb81w) (YT:82) - [blog](https://sedimental.org/the_packaging_gradient.html).
+
+> One lesson threaded throughout Enterprise Software with Python is that deployment is **not the last step of development**. 
+
