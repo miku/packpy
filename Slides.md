@@ -400,9 +400,7 @@ clean:
 run: app.zip
 	python $<
 
-
 -->
-
 
 ----
 
@@ -428,4 +426,32 @@ And:
 
 # Works with packages
 
+See: Package.
 
+----
+
+# Tooling for zip files: PEX
+
+* [https://github.com/pantsbuild/pex](https://github.com/pantsbuild/pex)
+
+> pex is a library for generating .pex (Python EXecutable) files which are executable Python environments in the spirit of virtualenvs. pex is an expansion upon the ideas outlined in PEP 441 and makes the deployment of Python applications as <u>**simple as cp**</u>.
+
+----
+
+# Launching an interpreter with dependencies installed
+
+```
+$ pex requests
+Python 3.6.4 (default, Feb 14 2018, 14:01:23)
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 ...
+Type "help", "copyright", "credits" or ...
+(InteractiveConsole)
+
+>>> import requests
+>>> requests.get("https://pyconbalkan.com")
+<Response [200]>
+```
+
+----
+
+# 
