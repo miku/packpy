@@ -154,6 +154,15 @@ However, there are only three required fields: **name**, **version**, and **pack
 
 # A minimal setup.py
 
+```shell
+$ tree
+.
+├── hellopkg
+│   ├── __init__.py
+│   └── hello.py
+└── setup.py
+```
+
 ```python
 $ cat setup.py
 from setuptools import setup
@@ -164,3 +173,43 @@ setup(name='hellopkg',
 ```
 
 ----
+
+# Additional fields in setup.py
+
+Usually, you project will have dependencies and it might come with command line programs:
+
+```python
+from setuptools import setup
+
+setup(name='hellopkg',
+      version='0.1.0',
+      packages=['hellopkg'],
+      install_requires=['requests'],
+      entry_points={
+          'console_scripts': [
+          	'hellopkg-cli=hellopkg.hello:hello'
+          ],
+      })
+```
+
+----
+
+# Building a source distribution
+
+```shell
+$ python setup.py sdist
+...
+Writing hellopkg-0.1.0/setup.cfg
+creating dist
+Creating tar archive
+...
+
+$ tree .
+.
+├── dist
+│   └── hellopkg-0.1.0.tar.gz
+├── hellopkg
+│   ├── __init__.py
+│   └── hello.py
+└── setup.py
+```
