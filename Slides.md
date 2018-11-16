@@ -1,6 +1,6 @@
 # Packaging Python Applications
 
-PyCon Balkan, Belgrade, 2018-11-17 16:00-16:30
+PyCon Balkan, Belgrade, 2018-11-17 16:00-16:25
 
 ![](images/pycon-logo-small.png)
 
@@ -511,3 +511,81 @@ Easier to handle single files.
 
 # Reusing Linux package managers
 
+* Linux package managers have solved a hard problem already
+* Allows to add additional files (e.g. service definitions, configuration)
+* Upgrade and downgrade path
+
+----
+
+# Debian
+
+* [dh-virtualenv](https://github.com/spotify/dh-virtualenv) from Spotify
+
+> The idea behind dh-virtualenv is to be able to combine the power of Debian packaging with the sandboxed nature of virtualenvs. In addition to this, using virtualenv enables installing requirements via Python Package Index instead of relying on the operating system provided Python packages. The only limiting factor is that you have to run the same Python interpreter as the operating system.
+
+----
+
+# Example: dh-virtualenv
+
+Example: Debian.
+
+----
+
+# Docker and Python
+
+Add a level of isolation.
+
+----
+
+# Building images with grocker
+
+```shell
+$ pip install grocker
+```
+
+Basic usage:
+
+```
+$ grocker build ipython==7.1.1 --entrypoint ipython
+```
+
+----
+
+# Running IPython in a container
+
+```shell
+$ docker images
+REPOSITORY TAG   IMAGE ID     CREATED        SIZE
+ipython    7.1.1 7ca7552ef4bf 36 seconds ago 76MB
+```
+
+Then run:
+
+```shell
+$ docker run --rm -ti ipython:7.1.1
+Python 3.6.6 (default, Aug 24 2018, 05:04:18)
+...
+In [1]: import os
+
+In [2]: os.getpid()
+Out[2]: 1
+
+In [3]:
+```
+
+----
+
+# Wrap up
+
+* many options available
+* basics are simple
+* depends on your target platform
+
+![](images/py_pkg_applications.png)
+
+----
+
+# Resources
+
+* [Python Packaging User Guide](https://packaging.python.org/)
+* [Python Packaging](http://aosabook.org/en/packaging.html) from [The Architecture of Open Source Applications](http://aosabook.org/en/index.html)
