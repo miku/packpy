@@ -14,9 +14,9 @@ tell application "System Events" to tell process "Marp"
     keystroke return
     delay 1
     keystroke space
-    delay 5
+    delay 3
     tell application "Marp"
-        quit 
+        quit
     end tell
 
 end tell

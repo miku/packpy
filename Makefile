@@ -1,5 +1,5 @@
 Slides.pdf: Slides.md
-	osascript marp.scpt
+	touch Slides.pdf && osascript marp.scpt
 	# pandoc -t beamer $< -o $@
 
 clean:
