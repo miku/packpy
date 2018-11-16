@@ -151,3 +151,16 @@ However, there are only three required fields: **name**, **version**, and **pack
 > The name field must be unique if you wish to publish your package on the Python Package Index (PyPI). The version field keeps track of different releases of the project. The packages field describes where you’ve put the Python source code within your project.
 
 ----
+
+# A minimal setup.py
+
+```python
+$ cat setup.py
+from setuptools import setup
+
+setup(name='hellopkg',
+      version='0.1.0',
+      packages=['hellopkg'])
+```
+
+----
