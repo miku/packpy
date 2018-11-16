@@ -371,6 +371,8 @@ universal = 1
 
 -- zzzeek on [Aug 14, 2016](https://news.ycombinator.com/item?id=12285497)
 
+* 291/360 popular packages available as wheels (https://pythonwheels.com/)
+
 ----
 
 # Now to something completely different
@@ -484,6 +486,7 @@ Welcome to the Sphinx 1.8.2 quickstart utility.
 # Limitations
 
 * Editable distributions not supported
+* Similar limitations for target: Architecture, Python Version
 
 ----
 
