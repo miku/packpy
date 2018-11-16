@@ -1,8 +1,12 @@
 # Packaging Python Applications
 
-PyConBalkan, Belgrade, 2018-11-17 16:00-16:30
+PyCon Balkan, Belgrade, 2018-11-17 16:00-16:30
+
+![](images/pycon-logo-small.png)
 
 [Martin Czygan](mailto:martin.czygan@gmail.com) / github.com/miku / [@cvvfj](twitter.com/cvvfj)
+
+
 
 ----
 
@@ -30,7 +34,9 @@ There is some satisfaction in being able to just run *one command*. There are al
 # Packaging
 
 * loosely defined as *approaches* and *tools* to create usable (installable, shippable) software
-* there is this thing called: *The packaging gradient* 
+* There is this thing called: [The packaging gradient](http://sedimental.org/the_packaging_gradient.html)
+
+![](images/py_pkg_applications.png)
 
 ----
 
@@ -70,6 +76,10 @@ There are two items related to packaging:
 * #2 Can you **make a build** in **one step**?
 * #3 Do you make **daily builds**?
 
+Obviously, there are many posts with title "Joel test in 2019" and such.
+
+<!-- and one that reads 2019, still includes these two points -->
+
 ----
 
 # On item #2
@@ -107,9 +117,9 @@ There is an nice talk called *The Packaging Gradient* by Mahmoud Hashemi at [PyB
 * "just do nothing"
 * modules, packages, distributions, PyPI
 * single file deployments (PEP 441)
-* reusing linux distribution infrastructure
-* images and containers
 * frozen software
+* reusing linux package managers
+* building images
 
 ----
 
@@ -363,6 +373,8 @@ universal = 1
 
 ----
 
-# Single file
+# Now to something completely different
+
+----
 
 
