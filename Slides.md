@@ -359,6 +359,8 @@ $ python setup.py bdist_wheel --universal
 or
 
 ```ini
+$ cat setup.cfg
+
 [bdist_wheel]
 universal = 1
 ```
