@@ -6,8 +6,6 @@ PyCon Balkan, Belgrade, 2018-11-17 16:00-16:30
 
 [Martin Czygan](mailto:martin.czygan@gmail.com) / github.com/miku / [@cvvfj](twitter.com/cvvfj)
 
-
-
 ----
 
 # About me
@@ -106,7 +104,7 @@ There slides reflect only a few small pieces of the puzzle.
 
 # The Packaging Gradient
 
-There is an nice talk called *The Packaging Gradient* by Mahmoud Hashemi at [PyBay 2017](https://www.youtube.com/watch?v=iLVNWfPWAC8) (YT:601), [BayPiggies2017](https://www.youtube.com/watch?v=Q3LyPTTb81w) (YT:82) - [blog](https://sedimental.org/the_packaging_gradient.html).
+There is an nice talk called *The Packaging Gradient* by Mahmoud Hashemi at [PyBay 2017](https://www.youtube.com/watch?v=iLVNWfPWAC8) (yt: 601), [BayPiggies2017](https://www.youtube.com/watch?v=Q3LyPTTb81w) (yt: 82) - [blog post](https://sedimental.org/the_packaging_gradient.html).
 
 > One lesson threaded throughout Enterprise Software with Python is that deployment is **not the last step of development**. 
 
@@ -246,9 +244,9 @@ $ twine upload dist/hellopkg-0.1.0.tar.gz
 
 # Minimal viable distribution
 
-* structure your code
-* add setup.py
-* done
+1. write code
+2. add setup.py
+3. `$ python setup.py sdist && twine upload dist/*`
 
 ----
 
@@ -260,7 +258,7 @@ $ twine upload dist/hellopkg-0.1.0.tar.gz
 
 ```
 $ pip install -U cookiecutter
-$ cookiecutter https://github.com/audreyr/cookiecutter-pypackage.git
+$ cookiecutter https://github.com/audreyr/cookie...
 ```
 
 ----
@@ -377,6 +375,57 @@ universal = 1
 
 # Now to something completely different
 
+<!--
+$ echo <<EOF
+
+"""
+live coding a simple ZIP file python snippet
+"""
+
+import datetime
+import sys
+
+if __name__ == '__main__':
+    print(__doc__)
+    print('This is Python %s (%s)' % (sys.version, datetime.date.today()))
+
+EOF > __main__.py
+
+app.zip: __main__.py
+	zip $@ __main__.py
+
+clean:
+	rm -f app.zip
+
+run: app.zip
+	python $<
+
+
+-->
+
+
 ----
+
+# Python can run zip files
+
+Via [PEP-441](https://www.python.org/dev/peps/pep-0441/):
+
+> Python has had the ability to execute directories or ZIP-format archives as scripts since version 2.6. When invoked with a zip file or directory as its first argument the interpreter adds that directory to sys.path and executes the __main__ module.
+
+And:
+
+> These archives provide a great way to publish software that needs to be distributed as a <u>**single file**</u> script but is complex enough to need to be written as a collection of modules.
+
+----
+
+# Moderetaly popular feature
+
+[PEP-441 cont.](https://www.python.org/dev/peps/pep-0441/):
+
+> This feature is not as popular as it should be mainly because it was not promoted as part of Python 2.6.
+
+----
+
+# Works with packages
 
 
