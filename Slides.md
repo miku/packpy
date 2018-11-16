@@ -100,3 +100,54 @@ There is an nice talk called *The Packaging Gradient* by Mahmoud Hashemi at [PyB
 
 > One lesson threaded throughout Enterprise Software with Python is that deployment is **not the last step of development**. 
 
+----
+
+# What will we look at?
+
+* "just do nothing"
+* modules, packages, distributions, PyPI
+* single file deployments (PEP 441)
+* reusing linux distribution infrastructure
+* images and containers
+* frozen software
+
+----
+
+# A single Python file (module)
+
+* with a large standard library, it is possible to write useful things in Python and stdlib only
+* deployment cannot get simpler that `scp` or `curl`
+
+```shell
+# scp script.py ...
+```
+
+Requirements:
+
+* ssh
+* python on target machine (matching version)
+* script should have no dependencies
+
+Beautiful, if possible (*simple is better than complex*).
+
+----
+
+# Module, package, distribution
+
+* a **module** is as single, importable python file
+* a **package** is a directory (containing an `__init__.py`)
+* a **distribution** is a way to bundle zero or more packages (source and built distribution)
+
+----
+
+# A minimal setup.py
+
+Writing a setup.py file can be simple.
+
+> The smallest python project is two files. A setup.py file which describes the metadata about your project, and a file containing Python code to implement the functionality of your project.
+
+However, there are only three required fields: **name**, **version**, and **packages**.
+
+> The name field must be unique if you wish to publish your package on the Python Package Index (PyPI). The version field keeps track of different releases of the project. The packages field describes where you’ve put the Python source code within your project.
+
+----
