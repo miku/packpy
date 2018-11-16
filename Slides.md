@@ -10,6 +10,7 @@ PyConBalkan, Belgrade, 2018-11-17 16:00-16:30
 
 * Software developer at [Leipzig University Library](https://www.ub.uni-leipzig.de/start/)
 * Part-time consultant, co-author *Getting Started with Python Data Analysis* (2015)
+* Maintainer of a few open source tools
 
 ![](images/montage.png)
 
@@ -28,7 +29,7 @@ There is some satisfaction in being able to just run *one command*. There are al
 
 # Packaging
 
-* loosely defined as approaches and tools to create usable (installable, shippable) software
+* loosely defined as *approaches* and *tools* to create usable (installable, shippable) software
 * there is this thing called: *The packaging gradient* 
 
 ----
@@ -46,12 +47,38 @@ There is some satisfaction in being able to just run *one command*. There are al
 
 # So why care about packaging?
 
-* to share code
-* to collaborate
+* as individual or team
+* as company
 
-> It might seem strange to think about packaging before writing code, but this
-> process does wonders for avoiding future headaches. (https://packaging.python.org/overview/)
+----
+
+# Individuals or teams
+
+* to share code
+* collaborate or invite contributions
+
+> It might seem strange to think about packaging before writing code, but this process does wonders for avoiding future headaches. (https://packaging.python.org/overview/)
+
+----
+
+# As a company
+
+* Aug 9, 2000: [The Joel Test: 12 Steps to Better Code](https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/)
+
+There are two items related to packaging:
+
+* #2 Can you **make a build** in **one step**?
+* #3 Do you make **daily builds**?
+
+----
+
+# On item #2
+
+> By this I mean: <u>**how many steps**</u> does it take to make a **shipping build** from the latest source snapshot? On good teams, there's a <u>**single script**</u> you can run that does a full checkout from scratch, rebuilds every line of code, **makes the EXEs**, in all their various versions, languages, and #ifdef combinations, creates the **installation package**, and creates the final media — CDROM layout, download website, whatever.
 
 ----
 
 
+# On item #2
+
+> If the process takes any more than one step, it is <u>**prone to errors**</u>. And when you get closer to shipping, you want to have a <u>**very fast cycle**</u> of fixing the "last" bug, making the final EXEs, etc. If it takes 20 steps to compile the code, run the installation builder, etc., you’re <u>**going to go crazy**</u> and you’re going to make silly mistakes.
