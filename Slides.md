@@ -212,6 +212,46 @@ $ tree .
 └── setup.py
 ```
 
+----
+
+# Upload to [Test]PyPI
+
+```
+$ twine upload dist/hellopkg-0.1.0.tar.gz
+```
+
+* [https://pypi.org/project/twine/](https://pypi.org/project/twine/)
+
+> The biggest reason to use twine is that it securely authenticates you to PyPI over HTTPS using a verified connection regardless of the underlying Python version, while whether or not python setup.py upload will work correctly and securely depends on your build system, your Python version and the underlying operating system.
+
+----
+
+# Use testpypi for testing
+
+* https://packaging.python.org/guides/using-testpypi/
+
+> TestPyPI is a separate instance of the Python Package Index (PyPI) that allows you to try out the distribution tools and process without worrying about affecting the real index. TestPyPI is hosted at test.pypi.org
+
+----
+
+# Minimal viable distribution
+
+* structure your code
+* add setup.py
+* done
+
+----
+
+# Tools to create a Python Package
+
+* cookiecutter
+* e.g. https://github.com/audreyr/cookiecutter-pypackage
+
+
+```
+$ pip install -U cookiecutter
+$ cookiecutter https://github.com/audreyr/cookiecutter-pypackage.git
+```
 
 ----
 
@@ -236,9 +276,7 @@ dist/hellopkg-0.1.0-py3-none-any.whl: Zip archive data
 
 # Wheel types
 
-* universal 
-* pure python
-* platform
+* universal, pure python (2 or 3), platform (ext)
 
 The wheel filename follows [PEP 425](https://www.python.org/dev/peps/pep-0425).
 
@@ -278,6 +316,28 @@ $ python setup.py bdist_wheel
 
 ----
 
+# Crossplatform wheels 
+
+> Python wheels are great. Building them across Mac, Linux, Windows, on multiple versions of Python, is not.
+
+* https://github.com/joerick/cibuildwheel (Travis CI, Appveyor, and CircleCI)
+
+----
+
+# The manylinux tag
+
+* https://github.com/pypa/manylinux, [demo](https://github.com/pypa/python-manylinux-demo)
+
+> The goal of the manylinux project is to provide a convenient way to distribute binary Python extensions as wheels on Linux. 
+
+From [PEP 513](https://www.python.org/dev/peps/pep-0513/):
+
+> ... For Linux, the situation is much more delicate. In general, compiled Python extension modules built on one Linux distribution will not work on other Linux distributions, [...]
+> 
+> The two key causes are dependencies on shared libraries which are not present on users' systems, and dependencies on particular versions of certain core libraries like glibc.
+
+----
+
 # Additional setup.cfg
 
 > If your project contains **no C extensions** and is expected to work on both **Python 2 and 3**, you will want to tell wheel to produce universal wheels by adding this to your setup.cfg file.
@@ -302,4 +362,7 @@ universal = 1
 -- zzzeek on [Aug 14, 2016](https://news.ycombinator.com/item?id=12285497)
 
 ----
+
+# Single file
+
 
