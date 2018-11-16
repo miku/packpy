@@ -194,14 +194,12 @@ setup(name='hellopkg',
 
 ----
 
-# Building a source distribution
+# Creating a source distribution (sdist)
+
+* includes source files, might adjust what gets included in a MANIFEST.in
 
 ```shell
 $ python setup.py sdist
-...
-Writing hellopkg-0.1.0/setup.cfg
-creating dist
-Creating tar archive
 ...
 
 $ tree .
@@ -213,3 +211,95 @@ $ tree .
 │   └── hello.py
 └── setup.py
 ```
+
+
+----
+
+# Creating a built distribution (bdist)
+
+* wheel packaging standard, [PEP 427](https://www.python.org/dev/peps/pep-0427/)
+
+```shell
+$ python setup.py bdist_wheel
+.
+├── dist
+│   └── hellopkg-0.1.0-py3-none-any.whl
+├── hellopkg
+│   ├── __init__.py
+│   └── hello.py
+└── setup.py
+
+$ file dist/hellopkg-0.1.0-py3-none-any.whl
+dist/hellopkg-0.1.0-py3-none-any.whl: Zip archive data
+```
+---
+
+# Wheel types
+
+* universal 
+* pure python
+* platform
+
+The wheel filename follows [PEP 425](https://www.python.org/dev/peps/pep-0425).
+
+```
+{distribution}-{version}(-{build tag})?- \
+    {python tag}-{abi tag}-{platform tag}.whl
+```
+
+> For example, the tag <u>**py27-none-any**</u> indicates compatible with Python 2.7 with no abi requirement, on any platform. (cf. [PEP 3149](https://www.python.org/dev/peps/pep-3149/)).
+
+```
+hellopkg-0.1.0-cp36-cp36m-macosx_10_12_x86_64.whl
+```
+
+<!--
+
+#    --with-pydebug (flag: d)
+#    --with-pymalloc (flag: m)
+#    --with-wide-unicode (flag: u)
+
+>>> import sysconfig
+>>> sysconfig.get_config_var('SOABI')
+'cpython-36m-darwin'
+-->
+
+----
+
+# Creating a built distribution (bdist)
+
+```shell
+$ python setup.py bdist_wheel
+```
+
+> This will build any C extensions in the project and then package those and the pure Python code into a .whl file in the dist directory.
+
+-- https://wheel.readthedocs.io/en/stable/user_guide.html
+
+----
+
+# Additional setup.cfg
+
+> If your project contains **no C extensions** and is expected to work on both **Python 2 and 3**, you will want to tell wheel to produce universal wheels by adding this to your setup.cfg file.
+
+```shell
+$ python setup.py bdist_wheel --universal
+```
+
+or
+
+```ini
+[bdist_wheel]
+universal = 1
+```
+
+----
+
+# Wheel benefits
+
+> Wheels are unbelievably critical in that they allow **super easy caching** of pre-built packages on any given host. If you've noticed these days you can type `pip install numpy` at will and it seems to usually run in less than **two seconds rather than 5 minutes, thank wheels**. This is particularly a big deal if you work lot with CI. 
+
+-- zzzeek on [Aug 14, 2016](https://news.ycombinator.com/item?id=12285497)
+
+----
+
