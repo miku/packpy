@@ -436,6 +436,19 @@ See: Package.
 
 > pex is a library for generating .pex (Python EXecutable) files which are executable Python environments in the spirit of virtualenvs. pex is an expansion upon the ideas outlined in PEP 441 and makes the deployment of Python applications as <u>**simple as cp**</u>.
 
+
+> PEX files have been used by Twitter to deploy Python applications to production since 2011.
+
+----
+
+# How it works
+
+> PEX files rely on a feature in the Python importer that considers the presence of a `__main__.py` within the module as a signal to treat that module as an executable.
+
+Python import subsystem is flexible to handle code from disk or from within a zip file.
+
+> Adding #!/usr/bin/env python to the top of a .zip file containing a __main__.py and marking it executable will turn it into an executable Python program.
+
 ----
 
 # Launching an interpreter with dependencies installed
@@ -454,4 +467,17 @@ Type "help", "copyright", "credits" or ...
 
 ----
 
-# 
+# Build a single executable
+
+Use `-c` for script name and `-o` for an output file.
+
+```
+$ pex sphinx -c sphinx-quickstart -o sphinx
+
+$ ./sphinx
+Welcome to the Sphinx 1.8.2 quickstart utility.
+...
+```
+
+----
+
