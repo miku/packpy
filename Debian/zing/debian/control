@@ -1,0 +1,13 @@
+Source: zing
+Section: python
+Priority: extra
+Maintainer: Martin Czygan <martin.czygan@gmail.com>
+Build-Depends: debhelper (>= 9), python, dh-virtualenv (>= 0.8)
+Standards-Version: 3.9.5
+
+Package: zing
+Architecture: any
+Pre-Depends: dpkg (>= 1.16.1), python2.7 | python2.6, ${misc:Pre-Depends}
+Depends: ${python:Depends}, ${misc:Depends}, libxml2
+Description: really neat package!
+ second line can contain extra information about it.

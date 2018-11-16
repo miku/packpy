@@ -481,3 +481,33 @@ Welcome to the Sphinx 1.8.2 quickstart utility.
 
 ----
 
+# Limitations
+
+* Editable distributions not supported
+
+----
+
+# Another tool: shiv
+
+From LinkedIn.
+
+> At LinkedIn we ship hundreds of command line utilities to every machine in our data-centers and all of our employees workstations. The vast majority of these utilties are written in Python.
+
+Easier to handle single files.
+
+> Because of differences in iteration rate and the inherent problems present when dealing with such a huge dependency graph, we need to package the executables discretely. 
+
+----
+
+# Pex differences
+
+* shiv only works with Python 3.6+
+* shiv will decompress bundle transparently
+* tries to mirror environment more closely (site-packages instead of wheels)
+
+> Because we optimize for a shorter sys.path and don't include pkg_resources in the critical path, executables created with shiv can outperform ones created with PEX by almost 2x.
+
+----
+
+# Reusing Linux package managers
+

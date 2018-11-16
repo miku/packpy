@@ -1,0 +1,11 @@
+Package: zing
+Version: 0.1-1
+Architecture: amd64
+Maintainer: Martin Czygan <martin.czygan@gmail.com>
+Installed-Size: 13941
+Pre-Depends: dpkg (>= 1.16.1), python2.7 | python2.6
+Depends: libxml2
+Section: python
+Priority: extra
+Description: really neat package!
+ second line can contain extra information about it.
