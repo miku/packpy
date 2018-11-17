@@ -559,6 +559,7 @@ $ grocker build ipython==7.1.1 --entrypoint ipython
 * root, compiler and runner image
 * alpine base image
 * requires packaged applications
+* https://asciinema.org/a/Jwg7rY0ARcX4TKzLUrrOA8qYZ
 
 ----
 
@@ -598,5 +599,12 @@ In [3]:
 
 # Resources
 
+* [Packaging Gradient blog post](https://sedimental.org/the_packaging_gradient.html)
+* [Share your code!](https://www.youtube.com/watch?v=qOH-h-EKKac) (PyCon 2017)
 * [Python Packaging User Guide](https://packaging.python.org/)
 * [Python Packaging](http://aosabook.org/en/packaging.html) from [The Architecture of Open Source Applications](http://aosabook.org/en/index.html)
+* [pex](https://github.com/pantsbuild/pex)
+* [shiv](https://github.com/linkedin/shiv)
+* [dh-virtualenv](https://github.com/spotify/dh-virtualenv)
+* [grocker](https://github.com/Polyconseil/grocker)
+* and more ...
