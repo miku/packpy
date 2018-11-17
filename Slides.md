@@ -417,7 +417,7 @@ And:
 
 ----
 
-# Moderetaly popular feature
+# Moderately popular feature
 
 [PEP-441 cont.](https://www.python.org/dev/peps/pep-0441/):
 
