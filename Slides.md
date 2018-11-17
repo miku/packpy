@@ -18,7 +18,7 @@ PyCon Balkan, Belgrade, 2018-11-17 16:00-16:25
 
 ----
 
-# About me
+# Interests
 
 * interest in (build) automation: code, writing, data
 * anecdata: ant, ephemeral VMs, tried to ease adoption of Python at workplace
