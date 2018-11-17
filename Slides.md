@@ -485,7 +485,7 @@ Welcome to the Sphinx 1.8.2 quickstart utility.
 # Limitations
 
 * Editable distributions not supported
-* Similar limitations for target: Architecture, Python Version
+* Matching Python versions and platform-specific
 
 ----
 
@@ -507,7 +507,7 @@ Easier to handle single files.
 * shiv will decompress bundle transparently
 * tries to mirror environment more closely (site-packages instead of wheels)
 
-> Because we optimize for a shorter sys.path and don't include pkg_resources in the critical path, executables created with shiv can outperform ones created with PEX by almost 2x.
+> [... ] executables created with shiv can outperform ones created with PEX by almost 2x.
 
 ----
 
@@ -537,6 +537,10 @@ Example: Debian.
 
 Add a level of isolation.
 
+* grocker (2016-07-20)
+* build because debian packaging took 2 days (in 2015)
+* docker pull and run
+
 ----
 
 # Building images with grocker
@@ -550,6 +554,11 @@ Basic usage:
 ```
 $ grocker build ipython==7.1.1 --entrypoint ipython
 ```
+
+* multi-stage build (compile with build deps and runner)
+* root, compiler and runner image
+* alpine base image
+* requires packaged applications
 
 ----
 
