@@ -607,4 +607,4 @@ In [3]:
 * [shiv](https://github.com/linkedin/shiv)
 * [dh-virtualenv](https://github.com/spotify/dh-virtualenv)
 * [grocker](https://github.com/Polyconseil/grocker)
-* and more ...
+* Slides and examples at [https://github.com/miku/packpy](https://github.com/miku/packpy)
