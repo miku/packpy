@@ -1,7 +1,7 @@
 SHELL = /bin/bash
 
 my_application.pex:
-	pex -r <(pip freeze) -o $@
+	pex requests -o $@
 
 list:
 	pip freeze
@@ -11,3 +11,4 @@ clean:
 
 run: my_application.pex
 	./$<
+

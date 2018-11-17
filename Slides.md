@@ -251,7 +251,7 @@ $ twine upload dist/hellopkg-0.1.0.tar.gz
 
 # Tools to create a Python Package
 
-* cookiecutter
+* [cookiecutter](https://github.com/audreyr/cookiecutter)
 * e.g. https://github.com/audreyr/cookiecutter-pypackage
 
 
@@ -473,7 +473,7 @@ Type "help", "copyright", "credits" or ...
 Use `-c` for script name and `-o` for an output file.
 
 ```
-$ pex sphinx -c sphinx-quickstart -o sphinx
+$ pex sphinx -c sphinx-quickstart -o sphinx.pex
 
 $ ./sphinx
 Welcome to the Sphinx 1.8.2 quickstart utility.
