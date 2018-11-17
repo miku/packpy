@@ -9,7 +9,7 @@ $ pip install grocker
 Basic usage:
 
 ```
-$ grocker build ipython==5.0.0 --entrypoint ipython
+$ grocker build ipython==7.1.1 --entrypoint ipython
 ```
 
 Then run:
