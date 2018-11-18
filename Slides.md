@@ -4,7 +4,7 @@ PyCon Balkan, Belgrade, 2018-11-17 16:00-16:25
 
 ![](images/pycon-logo-small.png)
 
-[Martin Czygan](mailto:martin.czygan@gmail.com) / github.com/miku / [@cvvfj](twitter.com/cvvfj)
+[Martin Czygan](mailto:martin.czygan@gmail.com) / github.com/miku / [@cvvfj](https://twitter.com/cvvfj)
 
 ----
 
