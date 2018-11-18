@@ -106,7 +106,7 @@ There slides reflect only a few small pieces of the puzzle.
 
 There is an nice talk called *The Packaging Gradient* by Mahmoud Hashemi at [PyBay 2017](https://www.youtube.com/watch?v=iLVNWfPWAC8) (yt: 601), [BayPiggies2017](https://www.youtube.com/watch?v=Q3LyPTTb81w) (yt: 82) - [blog post](https://sedimental.org/the_packaging_gradient.html).
 
-> One lesson threaded throughout Enterprise Software with Python is that deployment is **not the last step of development**. 
+> One lesson threaded throughout Enterprise Software with Python is that deployment is **not the last step of development**.
 
 ----
 
@@ -323,7 +323,7 @@ $ python setup.py bdist_wheel
 
 ----
 
-# Crossplatform wheels 
+# Crossplatform wheels
 
 > Python wheels are great. Building them across Mac, Linux, Windows, on multiple versions of Python, is not.
 
@@ -335,12 +335,12 @@ $ python setup.py bdist_wheel
 
 * https://github.com/pypa/manylinux, [demo](https://github.com/pypa/python-manylinux-demo)
 
-> The goal of the manylinux project is to provide a convenient way to distribute binary Python extensions as wheels on Linux. 
+> The goal of the manylinux project is to provide a convenient way to distribute binary Python extensions as wheels on Linux.
 
 From [PEP 513](https://www.python.org/dev/peps/pep-0513/):
 
 > ... For Linux, the situation is much more delicate. In general, compiled Python extension modules built on one Linux distribution will not work on other Linux distributions, [...]
-> 
+>
 > The two key causes are dependencies on shared libraries which are not present on users' systems, and dependencies on particular versions of certain core libraries like glibc.
 
 ----
@@ -366,7 +366,7 @@ universal = 1
 
 # Wheel benefits
 
-> Wheels are unbelievably critical in that they allow **super easy caching** of pre-built packages on any given host. If you've noticed these days you can type `pip install numpy` at will and it seems to usually run in less than **two seconds rather than 5 minutes, thank wheels**. This is particularly a big deal if you work lot with CI. 
+> Wheels are unbelievably critical in that they allow **super easy caching** of pre-built packages on any given host. If you've noticed these days you can type `pip install numpy` at will and it seems to usually run in less than **two seconds rather than 5 minutes, thank wheels**. This is particularly a big deal if you work lot with CI.
 
 -- zzzeek on [Aug 14, 2016](https://news.ycombinator.com/item?id=12285497)
 
@@ -374,7 +374,7 @@ universal = 1
 
 ----
 
-# Now to something completely different
+# And Now for Something Completely Different
 
 <!--
 $ echo <<EOF
@@ -497,7 +497,7 @@ From LinkedIn.
 
 Easier to handle single files.
 
-> Because of differences in iteration rate and the inherent problems present when dealing with such a huge dependency graph, we need to package the executables discretely. 
+> Because of differences in iteration rate and the inherent problems present when dealing with such a huge dependency graph, we need to package the executables discretely.
 
 ----
 
